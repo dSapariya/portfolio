@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.nav{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    margin: 0;
+    padding: 30px;
+    outline: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.nav.sticky {
+    padding-top: 30%;
+  }
+.nav-name{
+    display: flex;
+    
+}
+.nav-name p{
+    font-family: Lucida Console;
+    font-size: 30px;
+    font-weight: lighter;
+}
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar ul li {
+    display: inline;
+    margin-left: 30px;
+    padding: 10px 20px;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    color: black;
+}
+.container{
+    height: 75vh;
+    background-image: url(images/bg.webp);
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.card{
+    display: flex;
+    width: 65%;
+    padding-top: 8%;
+    padding-left: 15%;
+    padding-right: 15%;
+    justify-content: center;
+    position:absolute;
+    bottom: 0;
+   
+}
+.card-bg{
+    background-color: rgb(24, 33, 83, 0.8);
+    width: 100%;
+}
+
+.left {
+    flex: 1; 
+    animation: slideLeftToRight 2s ease-out forwards;
+    animation-delay: 0s;
+}
+@keyframes slideLeftToRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.right {
+    background-color: #eff8ff;
+    flex: 1; 
+    animation: slideRightToLeft 2s ease-out forwards;
+    animation-delay: 0s;
+}
+@keyframes slideRightToLeft {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.user-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    justify-content: center;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+.user-data h1{
+    font-family: Lucida Console;
+    font-size: 30px;
+    font-weight: lighter;
+    padding-top: 50px;
+}
+.user-data{
+    padding-top:5%;
+    line-height:1.5
+}
+.container-about-us{
+    height: 75vh;
+    position: relative;
+}
+.content{
+    position: absolute;
+    top: 0;
+    padding-left: 15%;
+    padding-right: 15.5%;
+    background-color: rgb(241 241 241);
+}
+.content-top{
+    background-color: rgb(24, 33, 83);
+    padding: 2%;
+    width: 89.5%;
+    display: flex;
+    justify-content: center;
+    gap:3%;
+}
+.content-desc{
+    text-align: center;
+    padding:10%;
+}
+.content-desc h1{
+    line-height:3
+}
+.content-desc p{
+    line-height:1.9
+}
+.container-experience{
+    width: 100%;
+    background-color: white;
+    height: 75vh;
+}
+.experience-title{
+    padding: 3%;
+    text-align: center;
+    border-bottom: solid 0.1px gray;
+}
+.experience {
+    padding: 15%;
+}
+.experience-card{
+    width: 100%;
+}
+.experience-data{
+    padding-bottom: 25px;
+    display: flex;
+    line-height: 1.5;
+}
+.experience-position{
+    width: 30%;
+}
+.experience-desc{
+    width: 70%;
+    padding-left:25px;
+    list-style-type: disc;
+}
+.experience-title{
+    padding: 3%;
+    text-align: center;
+    border-bottom: solid 0.1px gray;
+}
+.container-education{
+    width: 100%;
+    background-color: white;
+    height: 75vh;
+}
+.education-title{
+    padding: 3%;
+    text-align: center;
+    border-bottom: solid 0.1px gray;
+    border-top: solid 0.1px gray;
+}
+.line{
+    width: 1px;
+    height: auto;
+    background-color: black;
+}
+.client-container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.client-body{
+    display: flex;
+    justify-content: center;
+    padding: 10% 0%;
+}
+.image-card{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.image-card img{
+    width: 100px;
+    height: 100px;
+}
+.client-title{
+    padding: 3%;
+    text-align: center;
+    border-bottom: solid 2px white;
+    border-top: solid 0.1px gray;
+    background-color: rgb(24, 33, 83);
+    color: white;
+}
+.skill-container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/bg.webp);
+}
+.skills{
+    padding: 5% 15%;
+}
+.skills-card{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    /* width: 100%; */
+    /* padding: 15%; */
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+.skill-title{
+    padding: 3%;
+    text-align: center;
+    border-bottom: solid 2px white;
+    border-top: solid 0.1px gray;
+    background-color: rgb(24, 33, 83);
+    color: white;
+}
+.skills-list{
+    /* line-height:1.5 */
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    gap: 20px;
+}
+.skills-data{
+    padding: 25px;
+    background-color: rgb(69 81 122 / 50%);
+    color: white;
+    font-size: 20px;
+   
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(241 241 241);
+}
+.contact-title{
+    display: flex;
+    justify-content: center;
+    border: solid 1px white;
+    padding: 3%;
+}
+.contact-card{
+    display: flex;
+    justify-content: space-evenly;
+}
+.contact-form{
+    flex: 1;
+    padding: 40px;
+    border: solid 1px white;
+
+}
+.contact-info{
+    flex:1;
+    border: solid 1px white;
+}
+.form-data{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding: 2%;
+}
+.form-name{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+.form-input{
+    padding: 5%;
+    width: auto;
+    margin-top:2%;
+}
+.fname{
+    width: 50%;
+}
+.submit-btn{
+    padding: 2%;
+    margin: 2%;
+    background-color: rgb(24 33 83);
+    color: white;
+    font-size: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 500px) {
+    .card {
+        /* display: flex; */
+        flex-direction: column;
+    }
+}
+
+  
+
+
+  
