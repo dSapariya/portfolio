@@ -1,36 +1,43 @@
 <html>
-
 <head>
     <title>portfolio</title>
-    <link href="./style1.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link href="./style.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
-    <div class="nav">
-        <div class="nav-name">
-            <p>Dixa Sapariya</p>
+    <header id="header">
+        <div class="nav" id="nav">
+            <div class="nav-name" >
+                <p>Dixa Sapariya</p>
+            </div>
+            <div class="nav-bar" id="nav-bar">
+                <ul>
+                    <li>
+                        <a href="#about">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#experience">Experience</a>
+                    </li>
+                    <li>
+                        <a href="#education">Education</a>
+                    </li>
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="nav-bar">
-            <ul>
-                <li>
-                    <a href="#about">About Me</a>
-                </li>
-                <li>
-                    <a href="#experience">Experience</a>
-                </li>
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    
+    </header>
+    <div class="body-content">
 
+   
     <div class="container">
         <div class="card-bg">
             <div class="card">
@@ -69,10 +76,8 @@
         <div class="content">
             <div class="content-top">
                 <img src="./images/linkedin.webp"> 
-                <img src="./images/linkedin.webp"> 
-               
+                <img src="./images/linkedin.webp">     
             </div>
-           
             <div class="content-desc">
                 <h1>Hello! I'm Dixa</h1>
                 <p>
@@ -83,46 +88,9 @@
         </div>
    
     </div>
-    <!-- <div id="experience" class="container-experience">
+     <div id="experience" class="container-experience">
         <div class="experience-title">
-            <h1>Experience</h1>
-        </div>
-        <div class="experience">
-            <div class="experience-card">
-                    <div class="experience-data">
-                        <div class="experience-position">
-                            <p>2018-2019</p>
-                            <p>Web Developer</p>
-                        </div>
-                        <div class="line"></div>
-                        <div class="experience-desc">
-                            <p>Avinashi</p>
-                            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit
-                                Text” or double click me to add your own content and make changes to the font. I’m a
-                                great place for you to tell a story and let your users know a little more about you.</p>
-                        </div>
-                    </div>
-                    <div class="experience-data">
-                        <div class="experience-position">
-                            <p>2018-2019</p>
-                            <p>Web Developer</p>
-                        </div>
-                        <div class="line"> </div>
-                       
-                        <div class="experience-desc">
-                            <p>Avinashi</p>
-                            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit
-                                Text” or double click me to add your own content and make changes to the font. I’m a
-                                great place for you to tell a story and let your users know a little more about you.</p>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </div> -->
-
-    <div id="education" class="container-education">
-        <div class="education-title">
-            <h1>Education</h1>
+            <p>Experience</p>
         </div>
         <div class="experience">
             <div class="experience-card">
@@ -157,9 +125,9 @@
         </div>
     </div>
 
-    <div id="education" class="container-education">
-        <div class="education-title">
-            <h1>Education</h1>
+    <div id="education" class="container-experience">
+        <div class="experience-title">
+            <p>Education</p>
         </div>
         <div class="experience">
             <div class="experience-card">
@@ -196,7 +164,7 @@
 
     <div id="skills" class="client-container">
         <div class="client-title">
-            <h1>Skills</h1>
+            <p>Skills</p>
         </div>
         <div class="client-body">
             <div class="image-card">
@@ -242,7 +210,7 @@
 
     <div id="contact" class="contact-container">
         <div class="contact-title">
-            <h1>Contact Me</h1>
+            <p>Contact Me</p>
         </div>
         <div class="contact-card">
                 <div class="contact-form">
@@ -290,8 +258,9 @@
                 </div>
         </div>
        
-    </div>
-   
+    </div> 
+</div>
+    <script src="script.js"></script>
 </body>
 
 </html>
