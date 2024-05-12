@@ -4,10 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Get the offset position of the header
     var sticky = header.offsetTop;
-    
+    const content = document.getElementById('content-desc');
+    console.log('content',content);
     // Add scroll event listener
     window.addEventListener("scroll", function() {
         // If the user scrolls down, add "sticky" class to header
+        console.log('content');
         if (window.pageYOffset > sticky) {
             header.classList.add("sticky");
         } else {
@@ -15,6 +17,17 @@ document.addEventListener("DOMContentLoaded", function() {
             header.classList.remove("sticky");
         }
     });
+    // window.addEventListener('scroll', function()  {
+    //     const content = document.getElementById('content-desc');
+    //     console.log('content',content);
+    //     const triggerPoint = window.innerHeight * 0.7; // Adjust as needed
+        
+    //     // If scrolled past 70% of the viewport height
+    //     if (window.scrollY > triggerPoint) {
+    //         console.log('in hsw')
+    //       content.classList.add('show'); // Show content
+    //     }
+    //   });
     
     // Smooth scroll to section on click
     var navLinks = document.querySelectorAll("#header #nav #nav-bar ul li a");
@@ -29,4 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
+ 
 });
+
