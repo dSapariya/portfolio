@@ -60,6 +60,7 @@
 }
 .container{
     height: 75vh;
+    
     background-image: url(images/bg.webp);
     background-position: center;
     background-size: cover;
@@ -127,7 +128,6 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 15%;
-    padding-right: 15%;
     justify-content: center;
 }
 .text-uppercase{
@@ -157,7 +157,9 @@
     flex-direction: column;
     align-items: center;
     background-color: rgb(241 241 241);
+    
 }
+
 .content-top{
     background-color: rgb(24, 33, 83);
     /* padding: 2%; */
@@ -187,11 +189,32 @@
     text-align: center;
     line-height: 1.5em;
     font-size: 16px;
-    opacity: 1; 
-    transition: opacity 0.5s ease;
+  
 }
-.show {
+.content-description{
+    opacity: 0;
+    transition: all 2s;
+}
+.show-about {
     opacity: 1; /* Show content */
+}
+.content-description:nth-child(2){
+    transition-delay: 200ms;
+  }
+  .content-description:nth-child(3){
+    transition-delay: 300ms;
+  }
+  .content-description:nth-child(4){
+    transition-delay: 400ms;
+  }
+  .content-description:nth-child(5){
+    transition-delay: 500ms;
+  }
+  .content-description:nth-child(6){
+    transition-delay: 600ms;
+  }
+  .content-description:nth-child(7){
+    transition-delay: 700ms;
   }
 .content-desc h1{
     line-height:3
@@ -225,7 +248,14 @@
     padding-bottom: 25px;
     display: flex;
     line-height: 1.5;
+    opacity: 0;
+    transition: all 2s;
+ 
 }
+.show {
+    opacity: 1; /* Show content */
+    
+  }
 .experience-position{
     width: 30%;
 }
@@ -233,6 +263,10 @@
     width: 70%;
     padding-left:25px;
     list-style-type: disc;
+}
+.experience-position p:first-child{
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .container-education{
@@ -263,7 +297,7 @@
 .client-body{
     display: flex;
     justify-content: center;
-    padding: 10% 0%;
+    padding: 10% 7%;
 }
 .image-card{
     display: flex;
@@ -272,7 +306,13 @@
     align-content: center;
     flex-wrap: wrap;
     align-items: center;
+    /* opacity: 0;
+    transition: all 2s;
+    filter: blur(5px);
+    transform: translateX(-100%); */
 }
+
+
 .image-card img{
     width: 100px;
     height: 100px;
@@ -389,9 +429,85 @@
 .tooltip {
     position: relative;
     display: inline-block;
+    opacity: 0;
+    transition: all 2s;
+    filter: blur(5px);
+    transform: translateX(-100%);
   }
-  
-  .tooltip .tooltiptext {
+  .tooltip:nth-child(2){
+    transition-delay: 100ms;
+  }
+  .tooltip:nth-child(3){
+    transition-delay: 200ms;
+  }
+  .tooltip:nth-child(4){
+    transition-delay: 300ms;
+  }
+  .tooltip:nth-child(5){
+    transition-delay: 400ms;
+  }
+  .tooltip:nth-child(6){
+    transition-delay: 500ms;
+  }  
+  .tooltip:nth-child(7){
+    transition-delay: 600ms;
+  }
+  .tooltip:nth-child(8){
+    transition-delay: 700ms;
+  }
+  .tooltip:nth-child(9){
+    transition-delay: 800ms;
+  }
+  .tooltip:nth-child(10){
+    transition-delay: 900ms;
+  }
+  .show-image {
+    opacity: 1; /* Show content */
+    filter: blur(0);
+    transform: translateX(0);
+    
+}
+.tooltip-right{
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    transition: all 2s;
+    filter: blur(5px);
+    transform: translateX(100%);
+}
+.show-image-right {
+    opacity: 1; /* Show content */
+    filter: blur(0);
+    transform: translateX(0);
+    
+}
+.tooltip-right:nth-child(2){
+    transition-delay: 100ms;
+  }
+  .tooltip-right:nth-child(3){
+    transition-delay: 200ms;
+  }
+  .tooltip-right:nth-child(4){
+    transition-delay: 300ms;
+  }
+  .tooltip-right:nth-child(5){
+    transition-delay: 400ms;
+  }
+  .tooltip-right:nth-child(6){
+    transition-delay: 500ms;
+  }  
+  .tooltip-right:nth-child(7){
+    transition-delay: 600ms;
+  }
+  .tooltip-right:nth-child(8){
+    transition-delay: 700ms;
+  }
+  .tooltip-right:nth-child(9){
+    transition-delay: 800ms;
+  }
+
+
+.tooltip .tooltiptext {
        visibility: hidden;
        width: 80px;
        background-color: #555;
@@ -407,10 +523,37 @@
        opacity: 0;
        transition: opacity 0.3s;
   }
+  .tooltip-right .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 66%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
   
   .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+  }
+  .tooltip-right:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+.user-contact-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 45%;
+    justify-content: center;
   }
   
 form{

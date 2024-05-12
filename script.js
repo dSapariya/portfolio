@@ -4,8 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Get the offset position of the header
     var sticky = header.offsetTop;
-    const content = document.getElementById('content-desc');
-    console.log('content',content);
     // Add scroll event listener
     window.addEventListener("scroll", function() {
         // If the user scrolls down, add "sticky" class to header
@@ -42,6 +40,63 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry)=>{
+            console.log('entry',entry)
+            if(entry.isIntersecting){
+                entry.target.classList.add('show')
+            }
+            else{
+                entry.target.classList.remove('show');
+            }
+        })
+    })
+    const hiddenElements = document.querySelectorAll('.experience-data');
+    hiddenElements.forEach((el)=>observer.observe(el))
+
+    const observerImage = new IntersectionObserver((entries) => {
+        entries.forEach((entry)=>{
+            console.log('image',entry)
+            if(entry.isIntersecting){
+                entry.target.classList.add('show-image')
+            }
+            else{
+                entry.target.classList.remove('show-image');
+            }
+        })
+    })
+    const hiddenElementsImage = document.querySelectorAll('.tooltip');
+    hiddenElementsImage.forEach((el)=>observerImage.observe(el))
+
+    const observerImageRight = new IntersectionObserver((entries) => {
+        entries.forEach((entry)=>{
+            console.log('image-right',entry)
+            if(entry.isIntersecting){
+                entry.target.classList.add('show-image-right')
+            }
+            else{
+                entry.target.classList.remove('show-image-right');
+            }
+        })
+    })
+    const hiddenElementsImageRight = document.querySelectorAll('.tooltip-right');
+    hiddenElementsImageRight.forEach((el)=>observerImageRight.observe(el))
+
+    const observerAbous = new IntersectionObserver((entries) => {
+        entries.forEach((entry)=>{
+            console.log('show-about',entry)
+            if(entry.isIntersecting){
+                entry.target.classList.add('show-about')
+            }
+            else{
+                entry.target.classList.remove('show-about');
+            }
+        })
+    })
+    const hiddenElementsAbout = document.querySelectorAll('.content-description');
+    hiddenElementsAbout.forEach((el)=>observerAbous.observe(el))
+
  
 });
 
