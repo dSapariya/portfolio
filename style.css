@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+:root{
+    --primary-text-black-color:#333;
+    --primary-text-white-color:#ffffff;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -45,7 +50,7 @@
 }
 .nav-bar ul li a{
     text-decoration: none;
-    color: black;
+    color: var(--primary-text-black-color);
 }
 .container{
     height: 75vh;
@@ -208,8 +213,7 @@
     padding: 1.5%;
     text-align: center;
     border-bottom: solid 0.1px gray;
-    color: white;
-    color: black;
+    color: var(--primary-text-black-color);
     text-transform: uppercase;
     font-weight: 500;
     font-size: 30px;
@@ -251,8 +255,7 @@
     text-align: center;
     border-bottom: solid 0.1px gray;
     border-top: solid 0.1px gray;
-    color: white;
-    color: black;
+    color: var(--primary-text-black-color);
     text-transform: uppercase;
     font-weight: 500;
     font-size: 30px;
