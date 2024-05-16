@@ -52,6 +52,16 @@
     text-decoration: none;
     color: var(--primary-text-black-color);
 }
+.nav-icon{
+    width: 50px;
+height: 50px;
+position: absolute;
+/* justify-content: space-evenly; */
+top: 0;
+right: 0;
+padding-top:3%;
+display: none;
+}
 .container{
     height: 75vh;
     background-image: url(images/bg.webp);
@@ -579,14 +589,13 @@ form{
     height: 50px;
 } */
 @media (max-width: 500px) {
-    .card {
-        /* display: flex; */
+    /* .card {
         flex-direction: column;
+    } */
+    .nav-icon{
+        display: block;
     }
-    .nav-bar{
-        width: 50px;
-        height: 50px;
-    }
+
 }
 
 
