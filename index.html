@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <header id="header">
         <div class="nav" id="nav">
             <div class="nav-name">
@@ -33,16 +34,52 @@
                     <li>
                         <a href="#contact">Contact</a>
                     </li>
-                    <li>
+                    <li onclick="showSideBar()">
                         <img class="nav-icon" src="./images/layout-sidebar.svg" alt="menu-icon"/>
                     </li>
                 </ul>
+               
                 
 
             </div>
+            <nav>
+                <ul class="side-bar">
+                    <li onclick="hideSideBar()"><a> <img class="cross-icon" src="./images/cross.png" alt="menu-icon"/></a></li>
+                   
+                    <li>
+                        <a href="#about">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#experience">Experience</a>
+                    </li>
+                    <li>
+                        <a href="#education">Education</a>
+                    </li>
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <!-- <li onclick="showSideBar()">
+                        <img class="nav-icon" src="./images/layout-sidebar.svg" alt="menu-icon"/>
+                    </li> -->
+                </ul>
+            </nav>
+            
         </div>
 
     </header>
+    <script>
+        function showSideBar(){
+            const sideBar = document.querySelector('.side-bar');
+            sideBar.style.display = 'flex';
+        }
+        function hideSideBar(){
+            const sideBar = document.querySelector('.side-bar');
+            sideBar.style.display = 'none';
+        }
+    </script>
     <div class="body-content">
 
 
