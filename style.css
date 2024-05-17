@@ -3,6 +3,8 @@
 :root{
     --primary-text-black-color:#333;
     --primary-text-white-color:#ffffff;
+    --secondary-text-color:#98e8cd;
+    --primary-bg-gray-color:rgb(241 241 241);
 }
 
 *{
@@ -15,7 +17,7 @@
     min-height: 100vh;
 }
 nav {
-    background-color: #fff;
+    background-color:var(--primary-bg-gray-color); 
     box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
 }
 nav ul {
@@ -120,14 +122,54 @@ display: none;
 }
 .container{
     height: 75vh;
-    background-image: url(images/bg.webp);
+    /* background-image: url(images/bg.webp); */
     background-position: center;
     background-size: cover;
     padding-bottom: 0px;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     overflow: hidden;
     position: relative;
+    background:black
+}
+.container-card{
+    height: 75vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    padding: 0 2%;
+    display: flex;
+}
+.container-heading{
+    font-size: 65px;
+    font-family: hagrid;
+}
+.container-subheading{
+    font-size: 28px;
+    font-family: neue machina;
+}
+.container-heading span{
+    color: var(--secondary-text-color);
+}
+.container-image{
+    padding: 0 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-image img{
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
 }
 .card{
     display: flex;
@@ -665,8 +707,23 @@ form{
     .nav-bar ul li a{
         display: none;
     }
-    .container{
-        height: 100vh;
+    .container-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10%;
+    }
+    .container-text{
+        padding: 0 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-subheading {
+        font-size:22px;
+    }
+    .container-heading {
+        font-size:45px;
     }
     .card {
         flex-direction: column;
