@@ -3,7 +3,10 @@
 
 :root{
     --primary-bg-color:#ffffff;
-    --primary-color:#333;
+    --secondary-bg-color:black;
+    --primary-text-color:#333;
+    --secondary-text-color:white;
+    --text-color:#98e8cd;
 }
 *{
     box-sizing: border-box;
@@ -12,7 +15,7 @@
 }
 body {
     font-family: 'Lato',sans-serif;
-    color: var(--primary-color);
+    color: var(--primary-text-color);
     line-height: 1.6;
    
     background-position: center;
@@ -83,45 +86,34 @@ p{
 
 
 .showcase {
-    /* height: 600px; */
-    color: var(--primary-color);
     position:relative;
-    background-image: url(../images/bg.webp);
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: overlay; /* Blend mode for background */
-    background-size: cover;
-    background-position: center;
-    
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    /* background-color: rgb(24, 33, 83, 0.8); */
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-text-color);
+}
+.showcase .grid {
+    grid-template-columns: 75% 25%;
 }
 .showcase .container{
-    /* padding: 0;
-    background-color: white */
+    height: 75vh;
 }
 .showcase-image{
-    grid-column: 1;
+    grid-column: 2;
+}
+.showcase-image img{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
 }
 .showcase-text{
-    grid-column: 2;
-    background-color: #ffffff;
+    grid-column: 1;
 }
-.showcase h1{
-    font-size: 40px;
-
+.showcase-text .heading{
+    font-size: 65px;
 }
-.showcase-text p{
-    margin:20px 0;
-    position: relative;
-    top: 0;
+.heading span {
+    color: var(--text-color);
 }
-
-.showcase-text .text-data p {
-    margin: 10px 0;
-}
-.showcase .grid{
-    grid-template-columns: 50% 50%;
+.showcase-text .sub-heading{
+    font-size: 35px;
 }
 
