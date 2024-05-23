@@ -117,3 +117,24 @@ p{
     font-size: 35px;
 }
 
+
+.wrapper.spotlight {
+    background-color: #4c5c96;
+}
+
+.wrapper {
+    background-color: #2e3141;
+    margin: 6.5em 0;
+    position: relative;
+}
+
+
+.wrapper::before {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    content: '';
+    /* display: block; */
+    height: 6.5em;
+    position: absolute;
+    width: 100%;
+}
