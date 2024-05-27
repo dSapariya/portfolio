@@ -5,7 +5,7 @@
     --primary-bg-color:#ffffff;
     --secondary-bg-color:#353849;
     --blue1-bg-color:#4c5c96;
-    --blue-bg-color:#8ba1f0;
+    --blue-bg-color:#45558d;
     --primary-text-color:#333;
     --secondary-text-color:white;
     --text-color:#4c5c96;
@@ -18,16 +18,19 @@
  
 }
 body {
-    font-family: 'Lato',sans-serif;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    
     color: var(--primary-text-color);
     line-height: 1.6;
     height: 100vh;
     position:relative;
-    background-image: url(./../images/bg.webp);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(./../images/bg.jpg);
+    background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: overlay; /* Blend mode for background */
     background-size: cover;
     background-position: center;
+    line-height:2;
+    letter-spacing:1.4px
     
 }
 /* Utilities */
@@ -84,6 +87,7 @@ p{
     color: var(--primary-color);
     padding: 10px;
     margin: 0 5px;
+    text-transform: uppercase;
 }
 .navbar .flex{
     justify-content: space-between;
@@ -117,8 +121,23 @@ p{
     height: 100px;
     background: linear-gradient(to bottom left, var(--secondary-bg-color) 50%,rgba(0, 0, 0, 0.7) 50%);
 }
+.rectangle-4 {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom left, var(--secondary-bg-color) 50%,rgba(0, 0, 0, 0.7) 50%);
+}
+.rectangle-5 {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top left, var(--blue-bg-color) 50%,var(--blue1-bg-color) 50%);
+}
+.rectangle-6 {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom left, var(--blue-bg-color) 50%,var(--blue1-bg-color) 50%);
+}
 .showcase {
-  
+    padding: 5%;
     position:relative;
     /* background-color: var(--secondary-bg-color); */
     color: var(--secondary-text-color);
@@ -148,15 +167,18 @@ p{
 }
 .showcase-text .sub-heading{
     font-size: 35px;
+    text-transform: uppercase;
 }
 .showcase-text button{
-    padding: 10px 30px;
-    border-radius: 2px;
+    padding: 16px 36px;
+    border-radius: 9px;
     background: var(--blue1-bg-color);
     color: var(--secondary-text-color);
     font-size: 20px;
-    border: 1px solid white;
+    border: none;
     margin-top: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 /* About-us */
@@ -174,6 +196,8 @@ p{
     padding: 2% 0;
     font-weight: 500;
     font-size: 36px;
+    padding-bottom: 1em;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 }
 .about-us .description{
     line-height: 1.5;
@@ -181,7 +205,7 @@ p{
 }
 .about-us ul{
     list-style-type:circle;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 
@@ -191,18 +215,23 @@ p{
     padding:0 10%;
     background-color: var(--blue1-bg-color);
 }
+.two{
+    background-color: var(--blue-bg-color);
+}
 .experience .grid {
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 70% 30%;
+    gap:30px
 }
 .grid-right{
     display:grid;
     grid-template-columns: repeat(2,1fr);
     justify-content: center;
     align-items: center;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 30% 70%;
+    gap:30px
 }
 .experience-data {
-    margin: 25px 0;
+    margin: 60px 0;
 }
 .experience .title{
     display: flex;
@@ -212,11 +241,26 @@ p{
 }
 .experience-title p{
     font-size: 24px;
-    font-weight: 400;
+    padding-bottom: 1rem;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+    color: #ffffff;
+    font-family: Raleway, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin: 0 0 1em 0;
     text-transform: uppercase;
 }
 .experience-title ul{
+    padding-top: 1rem;
     list-style-type:circle;
+}
+.experience-title ul li{
+    padding-left: 0.5em;
+}
+.experience-icon img{
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
 }
 
 /* education */
@@ -267,8 +311,8 @@ p{
     align-items: center;
 }
 .tooltip img{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
 }
 
 .tooltiptext {
