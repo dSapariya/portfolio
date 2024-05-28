@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    var navLinks = document.querySelectorAll("#header #nav #nav-bar ul li a");
+    var navLinks = document.querySelectorAll("#header #nav-bar ul li a");
     navLinks.forEach(function(navLink) {
         navLink.addEventListener("click", function(e) {
             
@@ -79,21 +79,56 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     const hiddenElementsImageRight = document.querySelectorAll('.tooltip-right');
     hiddenElementsImageRight.forEach((el)=>observerImageRight.observe(el))
-
-    const observerAbous = new IntersectionObserver((entries) => {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+    const observerAbous = new IntersectionObserver((entries,observer) => {
         entries.forEach((entry)=>{
             console.log('show-about',entry)
             if(entry.isIntersecting){
-                entry.target.classList.add('show-about')
+                const liItems = entry.target.querySelectorAll('li');
+                liItems.forEach((li, index) => {
+                    setTimeout(() => {
+                        li.classList.add('show-about');
+                    }, index * 200); // 200ms staggered delay
+                });
+                observer.unobserve(entry.target);
             }
             else{
                 entry.target.classList.remove('show-about');
             }
         })
-    })
-    const hiddenElementsAbout = document.querySelectorAll('.content-description');
+    },observerOptions);
+    const hiddenElementsAbout = document.querySelectorAll('.about-us');
     hiddenElementsAbout.forEach((el)=>observerAbous.observe(el))
 
+
+    // showcase text 
+    const showcaseText = document.querySelector('.showcase-text');
+
+    // Add the in-view class on page load
+    window.addEventListener('load', function() {
+        showcaseText.classList.add('in-view');
+    });
+
+    // Also add the in-view class when the element is scrolled into view
+    const observerOptions1 = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer1 = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            }
+        });
+    }, observerOptions1);
+
+    observer1.observe(document.querySelector('.showcase-text'));
  
 });
 
