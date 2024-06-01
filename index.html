@@ -1,24 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>portfolio</title>
     <meta charset="UTF-8">
-    <link href="./style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./css/style.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <title>portfolio</title>
 </head>
 
 <body>
-
-    <header id="header">
-        <div class="nav" id="nav">
-            <div class="nav-name">
-                <p>Dixa Sapariya</p>
-            </div>
-            <div class="nav-bar" id="nav-bar">
-                <ul>
+    <!-- Nav bar -->
+    <div class="navbar" id="header">
+        <div class="container flex" id="nav-bar">
+            <h1 class="logo"></h1>
+            <nav class="main-nav-bar">
+                <ul >
                     <li>
                         <a href="#about">About Me</a>
                     </li>
@@ -29,47 +29,44 @@
                         <a href="#education">Education</a>
                     </li>
                     <li>
-                        <a href="#skills">Skills</a>
+                        <a href="#skills">Tech Stack</a>
                     </li>
                     <li>
                         <a href="#contact">Contact</a>
                     </li>
-                    <li onclick="showSideBar()">
-                        <img class="nav-icon" src="./images/layout-sidebar.svg" alt="menu-icon"/>
-                    </li>
-                </ul>
-            </div>
-            <nav>
-                <ul class="side-bar">
-                    <li onclick="hideSideBar()"><a> <img class="cross-icon" src="./images/cross.png" alt="menu-icon"/></a></li>
-                   
-                    <li>
-                        <a href="#about">About Me</a>
-                    </li>
-                    <li>
-                        <a href="#experience">Experience</a>
-                    </li>
-                    <li>
-                        <a href="#education">Education</a>
-                    </li>
-                    <li>
-                        <a href="#skills">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                    <!-- <li onclick="showSideBar()">
-                        <img class="nav-icon" src="./images/layout-sidebar.svg" alt="menu-icon"/>
-                    </li> -->
+                
                 </ul>
             </nav>
-            
-        </div>
+            <img class="nav-icon" onclick="showSideBar()" src="./images/menu.png" alt="menu-icon"/>
+            <nav class="side-bar">
+                <a onclick="hideSideBar()"> <img class="cross-icon" src="./images/cross.png" alt="menu-icon"/></a>
 
-    </header>
+                <ul >
+                   
+                    <li onclick="hideSideBar()">
+                        <a href="#about">About Me</a>
+                    </li>
+                    <li onclick="hideSideBar()">
+                        <a href="#experience">Experience</a>
+                    </li>
+                    <li onclick="hideSideBar()">
+                        <a href="#education">Education</a>
+                    </li>
+                    <li onclick="hideSideBar()">
+                        <a href="#skills">Tech Stack</a>
+                    </li>
+                    <li onclick="hideSideBar()">
+                        <a href="#contact">Contact</a>
+                    </li>
+                 
+                </ul>
+            </nav>
+        </div>
+    </div>
     <script>
         function showSideBar(){
             const sideBar = document.querySelector('.side-bar');
+            console.log('sidebar')
             sideBar.style.display = 'flex';
         }
         function hideSideBar(){
@@ -77,314 +74,208 @@
             sideBar.style.display = 'none';
         }
     </script>
-    <div class="body-content">
-
-
-        <!-- <div class="container">
-            <div class="card-bg">
-                <div class="card">
-                    <div class="left">
-                        <img src="images/profile.jpeg" alt="user-image" width="100%" height="100%">
-                    </div>
-                    <div class="right">
-                        <div class="user-content">
-                            <div class="user-data">
-                                <h1>Dixa Sapariya</h1>
-                                <p class="user-value text-uppercase">Senior Software Developer</p>
-                            </div>
-                            <div class="user-data">
-                                <p class="user-title">Experience</p>
-                                <p class="user-value">6 Years</p>
-                            </div>
-                            <div class="user-data">
-                                <p class="user-title">Phone</p>
-                                <p class="user-value">8160737985</p>
-                            </div>
-                            <div class="user-data">
-                                <p class="user-title">Email</p>
-                                <p class="user-value">dixasapariya786@gmail.com</p>
-                            </div>
-                            <div class="user-data">
-                                <p class="user-title">Date of Birth</p>
-                                <p class="user-value">10th March 1997</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div> 
-        </div>-->
-        <div class="container">
-            <div class="container-card">
-                <div class="container-text">
-                    <span class="container-heading">Hi, I'm <span>Dixa Sapariya,</span></span>
-                    <span class="container-subheading">and i'm a Senior Software Developer</span>
-                </div>
-                <div class="container-image">
-                    <img src="images/profile.jpeg" alt="user-image" width="100%" height="100%">
-                </div>
+    <section class="showcase">
+        <div class="container grid">
+            <div class="showcase-text">
+                <span class="heading">HI, DIXA HERE! :)</span><br />
+                <span class="sub-heading"> </> I'm a Senior Software Developer</span><br />
+                <button>
+                    Resume
+                </button>
             </div>
-           
+            <div class="showcase-image">
+                <img src="images/profile.jpeg" alt="user-image" width="100%" height="100%">
+
+            </div>
         </div>
-        <div id="about" class="container-about-us">
-            <div class="content">
-                <!-- <div class="content-top">
-                    <a href="https://www.linkedin.com/in/dixa-sapariya/" target="_blank"><img
-                            src="./images/linkedin.webp" alt="linkedin" /></a>
-                    <a href="https://github.com/dixaSapariya" target="_blank"><img src="./images/github.png"
-                            alt="github" /></a>
-                    <a href="https://leetcode.com/u/dixa_sapariya/" target="_blank"><img src="./images/leetcode.png"
-                            alt="leetcode" /></a>
-
-                </div> -->
-                <div class="content-desc">
-                    <h1 class="content-description">About my self</h1>
-
-                    <p class="content-description">
+     
+    </section>
+    <div class="rectangle-top"></div>
+    <section class="about-us" id="about">
+        <div class="container grid">
+            <h1 class="title">More About Me</h1>
+            <ul>
+                <li>
+                    <p class="description">
                         I'm a software developer, dedicated to mastering the latest technologies and design principles
-                        to build dynamic, responsive web solutions.
-                    <p class="content-description"> I have honed my skills in HTML, CSS,
+                        to build dynamic, responsive web solutions. </p>
+                </li>
+                <li>
+                    <p class="description"> I have honed my skills in HTML, CSS,
                         JavaScript,Typescript and various frontend frameworks Vue.js(Vue2 + Vue3) and ReactJs.</p>
-                    </p>
-                    <p class="content-description">My
-                        primary objective revolves around enhancing website performance to elevate user experiences to
+                </li>
+                <li>
+                    <p class="description">Myprimary objective revolves around enhancing website performance to elevate
+                        user experiences to
                         an exceptional level.</p>
-
-                    <p class="content-description">Utilising my extensive expertise in frontend development coupled with my
+                </li>
+                <li>
+                    <p class="description">Utilising my extensive expertise in frontend development coupled with my
                         adeptness in leveraging
                         cutting-edge technologies.</p>
-                    <p class="content-description"> I am deeply passionate about staying updated with the latest
+                </li>
+                <li>
+                    <p class="description"> I am deeply passionate about staying updated with the latest
                         advancements in frontend development and am committed to continuously refining my skills to
                         tackle evolving challenges in this field</p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
+    </section>
+    <div class="rectangle-bottom"></div>
+    <section class="experience" id="experience">
+        <div class="container">
+            <h1 class="title">Experience</h1>
+            <div class="experience-data grid">
+                <div class="experience-title">
+                    <p>Senior Software Engineer At ManekTech (Nov 2022 - Present)</p>
+                    <ul>
+                        <li> Led the development of an e-commerce platform using VueJS/ReactJS and Laravel.</li>
+                        <li> Collaborated with UX designers to create intuitive and user-friendly interfaces.
+                        </li>
+                        <li>Developed web applications that are user-friendly, component- based, reusable,
+                            dynamic, and have state management.</li>
+                        <li>Expertise in database management, including designing schemas, writing complex
+                            queries, and ensuring data integrity.</li>
+                        <li>Utilized test-driven development to maintain code quality.</li>
+                        <li>Conducted comprehensive code reviews, providing constructive feedback and ensuring
+                            code quality and adherence to coding stan- dards.</li>
+                        <li>Stayed up-to-date with industry trends and best practices to ensure the adoption of
+                            the latest technologies and methodologies.</li>
+                        <li>Projects : CWS-CRM(Laravel+Vue3),Skill Coins(NodeJs + ReactJs)</li>
 
-        <div id="experience" class="container-experience">
-            <div class="experience-title">
-                <p>Experience</p>
-            </div>
-            <div class="experience">
-                <div class="experience-card">
-
-                    <div class="experience-data">
-                        <div class="experience-position">
-                            <p>Senior Software Engineer</p>
-                            <p>ManekTech</p>
-                            <p>Nov 2022 - On going</p>
-                        </div>
-                        <!-- <div class="line"></div> -->
-                        <div class="experience-desc">
-
-                            <ul>
-                                <li> Led the development of an e-commerce platform using VueJS/ReactJS and Laravel.</li>
-                                <li> Collaborated with UX designers to create intuitive and user-friendly interfaces.
-                                </li>
-                                <li>Developed web applications that are user-friendly, component- based, reusable,
-                                    dynamic, and have state management.</li>
-                                <li>Expertise in database management, including designing schemas, writing complex
-                                    queries, and ensuring data integrity.</li>
-                                <li>Utilized test-driven development to maintain code quality.</li>
-                                <li>Conducted comprehensive code reviews, providing constructive feedback and ensuring
-                                    code quality and adherence to coding stan- dards.</li>
-                                <li>Stayed up-to-date with industry trends and best practices to ensure the adoption of
-                                    the latest technologies and methodologies.</li>
-                                <li>Projects : CWS-CRM(Laravel+Vue3),Skill Coins(NodeJs + ReactJs)</li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="experience-data">
-                        <div class="experience-position">
-                            <p>Web Developer</p>
-                            <p>Zignuts Technolab</p>
-                            <p>Sept 2020 - Nov 2022</p>
-                        </div>
-                        <!-- <div class="line"></div> -->
-                        <div class="experience-desc">
-
-                            <ul>
-                                <li>Developed and delivered a variety of web projects using Laravel and Vue.JS /
-                                    Nuxt.JS. </li>
-                                <li>Proficient in front-end technologies including HTML, CSS, and JavaScript, as well as
-                                    modern front-end libraries and frameworks.</li>
-                                <li>Used Quasar.JS framework to create multi-platform desktop applications, enhancing
-                                    accessibility and user reach.</li>
-                                <li>Developed a real-time chat application using Nuxt.JS and Laravel.</li>
-                                <li>Projects : IQ-CRM (Laravel+NuxtJs+QuasarJs)
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="experience-data">
-                        <div class="experience-position">
-                            <p>Web Developer</p>
-                            <p>Avinashi Ventures Pvt Ltd</p>
-                            <p>Sept 2020- Nov 2022</p>
-                        </div>
-                        <!-- <div class="line"></div> -->
-                        <div class="experience-desc">
-
-                            <ul>
-                                <li> Developed APIs using the Laravel framework, supporting multiple database
-                                    technologies including MongoDB, MySQL, GraphQL,and PostgreSQL.</li>
-                                <li> Designed and Integrate APIs in frontend and implemented RESTful APIs that
-                                    facilitated smooth data exchange between frontend and backend systems.</li>
-                                <li>Integrated third-party APIs, such as payment gateways and social media platforms, to
-                                    enhance application functionality.</li>
-                                <li>Projects : BookMyFarm(Laravel+VueJs),MeraCRM (Laravel)</li>
-
-                            </ul>
-                        </div>
-                    </div>
+                    </ul>
+                </div>
+                <div class="experience-icon">
+                    <img src="./images/mt.jpg" alt="ManekTech" />
                 </div>
             </div>
-        </div>
-
-        <div id="education" class="education-experience">
-            <div class="education-title">
-                <p>Education</p>
-            </div>
-            <div class="education">
-                <div class="education-card">
-                    <div class="education-data">
-                        <div class="education-position">
-                            <p>July 2014 - June 2018</p>
-                            <p>Bachelor's Degree</p>
-                        </div>
-                        <!-- <div class="line"></div> -->
-                        <div class="education-desc">
-
-                            <ul>
-                                <li>B.E., Computer Engineering, GTU</li>
-                                <li> Shree Swami Atmanand Saraswati Institute Of Technology, Surat</li>
-                                <li>CGPA 8.5</li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div id="skills" class="client-container">
-            <div class="client-title">
-                <p>Skills</p>
-            </div>
-            <div class="client-body">
-                <div class="image-card">
-                    <div class="tooltip">
-                        <img src="./images/vue.png" alt="vueJs">
-                        <span class="tooltiptext">VueJs</span>
-                    </div>
-
-
-                    <div class="tooltip"><img src="./images/react (1).png"><span class="tooltiptext">ReactJs</span>
-                    </div>
-                    <div class="tooltip"><img src="./images/js.png"><span class="tooltiptext">JavaScript</span></div>
-                    <div class="tooltip"><img src="./images/TypeScript.png"><span class="tooltiptext">TypeScript</span>
-                    </div>
-                    <div class="tooltip"><img src="./images/redux.png"><span class="tooltiptext">Redux</span></div>
-                    <div class="tooltip"><img src="./images/next.png"><span class="tooltiptext">NextJs</span></div>
-                    <div class="tooltip"><img src="./images/nuxt.png"><span class="tooltiptext">NuxtJs</span></div>
-                    <div class="tooltip"><img src="./images/qs.png"><span class="tooltiptext">QuasarJs</span></div>
-                    <div class="tooltip"><img src="./images/html.png"><span class="tooltiptext">HTML</span></div>
-                    <div class="tooltip-right"><img src="./images/css.png"><span class="tooltiptext">CSS</span></div>
-                    <div class="tooltip-right"><img src="./images/bs.png"><span class="tooltiptext">Bootstrap</span>
-                    </div>
-                    <div class="tooltip-right"><img src="./images/graphql.png"><span class="tooltiptext">GraphQL</span>
-                    </div>
-                    <div class="tooltip-right"><img src="./images/c.png"><span class="tooltiptext">C</span></div>
-                    <div class="tooltip-right"><img src="./images/cpp.png"><span class="tooltiptext">C++</span></div>
-                    <div class="tooltip-right"><img src="./images/sql.png"><span class="tooltiptext">SQL</span></div>
-                    <div class="tooltip-right"><img src="./images/mb.png"><span class="tooltiptext">MongoDB</span></div>
-                    <div class="tooltip-right"><img src="./images/git.png"><span class="tooltiptext">Git</span></div>
-                </div>
-
-
-            </div>
-
-        </div>
-
-        <!-- <div class="skill-container">
-        <div class="skill-title">
-            <h1>Skills</h1>
-        </div>
-            <div class="skills-card card-bg">
-                <div class="skills-list">
-                    <p class="skills-data">Microsoft ExCel - Advanced</p>
-                    <p class="skills-data">Microsoft ExCel - Advanced</p>
-                    <p class="skills-data">Microsoft ExCel - Advanced</p>
-                </div>
-                <div class="skills-list">
-                    <p class="skills-data">Microsoft ExCel - Advanced</p>
-                    <p class="skills-data">Microsoft ExCel - Advanced</p>
-                    <p class="skills-data">Microsoft ExCel - Advanced</p>
-                </div>
-            </div>
-    </div> -->
-
-        <div id="contact" class="contact-container">
-            <div class="contact-title">
-                <p>Contact Me</p>
-            </div>
-            <div class="contact-card">
-                <!-- <div class="contact-form">
-                    <form>
-                        <div class="form-name">
-                            <div class="form-data fname">
-                                <label>First Name</label>
-                                <input class="form-input" type="text" name="first_name" value="" />
-
-                            </div>
-                            <div class="form-data fname">
-                                <label>Last Name</label>
-                                <input class="form-input" type="text" name="last_name" value="" />
-
-                            </div>
-                        </div>
-                        <div class="form-data">
-                            <label>Email</label>
-                            <input class="form-input" type="email" name="email" value="" />
-                        </div>
-                        <div class="form-data">
-                            <label>Type your message here...</label>
-                            <textarea class="form-input" name="text_area" value=""></textarea>
-                        </div>
-                        <button class="submit-btn" type="submit">Submit</button>
-                    </form>
-                </div> -->
-                <div class="contact-info">
-                    <div class="user-contact-us">
-                        <div class="user-data">
-                            <h1>Dixa Sapariya</h1>
-                            <p class="user-value text-uppercase">Senior Software Developer</p>
-                        </div>
-
-                        <div class="user-data">
-                            <p class="user-title">Phone</p>
-                            <p class="user-value">1234567890</p>
-                        </div>
-                        <div class="user-data">
-                            <p class="user-title">Email</p>
-                            <p class="user-value">abc@gmail.com</p>
-                        </div>
-                        <div class="contact-icons">
-                            <a href="https://www.linkedin.com/in/dixa-sapariya/" target="_blank"><img src="./images/linkedIn-dark.png" alt="linkedin" width="50px" height="50px"></a>
-                            <a href="https://github.com/dixaSapariya" target="_blank"><img src="./images/github.png" alt="github"  width="50px" height="50px"></a>
-                            <a href="https://leetcode.com/u/dixa_sapariya/" target="_blank"><img src="./images/leetcode-dark.png" alt="leetcode"  width="50px" height="50px"></a>
         
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
 
         </div>
-    </div>
-    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">  </script> -->
-    <script defer src="script.js"></script>
+    </section>
+    <div class="rectangle-5"></div>
+    <section class="experience two" id="experience">
+        <div class="container">
+           
+            <div class="experience-data grid-right">
+                <div class="experience-icon">
+                    <img src="./images/zignuts.png" alt="ManekTech" />
+                </div>
+                <div class="experience-title">
+                    <p>Web Developer At Zignuts Technolab (Sept 2020 - Nov 2022)</p>
+                    <ul>
+                        <li>Developed and delivered a variety of web projects using Laravel and Vue.JS /
+                            Nuxt.JS. </li>
+                        <li>Proficient in front-end technologies including HTML, CSS, and JavaScript, as well as
+                            modern front-end libraries and frameworks.</li>
+                        <li>Used Quasar.JS framework to create multi-platform desktop applications, enhancing
+                            accessibility and user reach.</li>
+                        <li>Developed a real-time chat application using Nuxt.JS and Laravel.</li>
+                        <li>Projects : IQ-CRM (Laravel+NuxtJs+QuasarJs)
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+
+        </div>
+    </section>
+    <div class="rectangle-6"></div>
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="experience-data grid">
+                <div class="experience-title">
+                    <p>Web Developer At Avinashi Ventures Pvt Ltd (Sept 2020- Nov 2022)</p>
+                    <ul>
+                        <li> Developed APIs using the Laravel framework, supporting multiple database
+                            technologies including MongoDB, MySQL, GraphQL,and PostgreSQL.</li>
+                        <li> Designed and Integrate APIs in frontend and implemented RESTful APIs that
+                            facilitated smooth data exchange between frontend and backend systems.</li>
+                        <li>Integrated third-party APIs, such as payment gateways and social media platforms, to
+                            enhance application functionality.</li>
+                        <li>Projects : BookMyFarm(Laravel+VueJs),MeraCRM (Laravel)</li>
+
+                    </ul>
+                </div>
+                <div class="experience-icon">
+                    <img src="./images/avinashi.jpg" alt="ManekTech" />
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <div class="rectangle-3"></div>
+    <section class="education" id="education">
+        <div class="container">
+            <h1 class="title">Education</h1>
+            <div class="grid">
+                <div>
+                    <p>July 2014 - June 2018</p>
+                </div>
+                <div class="education-data">
+                    <ul>
+                        <li>B.E., Computer Engineering, GTU</li>
+                        <li> Shree Swami Atmanand Saraswati Institute Of Technology, Surat</li>
+                        <li>CGPA - 8.5</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="skills" id="skills">
+        <div class="container">
+            <h1 class="title">Tech Stack</h1>
+            <div class="image-card grid">
+                <div class="tooltip"><img  src="./images/vue.png" alt="vueJs"><span class="tooltiptext">VueJs</span></div>
+                <div class="tooltip"><img src="./images/react (1).png"><span class="tooltiptext">ReactJs</span>
+                </div>
+                <div class="tooltip"><img src="./images/js.png"><span class="tooltiptext">JavaScript</span></div>
+                <div class="tooltip"><img src="./images/TypeScript.png"><span class="tooltiptext">TypeScript</span>
+                </div>
+                <div class="tooltip"><img src="./images/redux.png"><span class="tooltiptext">Redux</span></div>
+                <div class="tooltip"><img src="./images/next.png"><span class="tooltiptext">NextJs</span></div>
+                <div class="tooltip"><img src="./images/nuxt.png"><span class="tooltiptext">NuxtJs</span></div>
+                <div class="tooltip"><img src="./images/qs.png"><span class="tooltiptext">QuasarJs</span></div>
+                <div class="tooltip"><img src="./images/html.png"><span class="tooltiptext">HTML</span></div>
+                <div class="tooltip"><img src="./images/css.png"><span class="tooltiptext">CSS</span></div>
+                <div class="tooltip"><img src="./images/bs.png"><span class="tooltiptext">Bootstrap</span></div>
+                <div class="tooltip"><img src="./images/graphql.png"><span class="tooltiptext">GraphQL</span>
+                </div>
+                <div class="tooltip"><img src="./images/c.png"><span class="tooltiptext">C</span></div>
+                <div class="tooltip"><img src="./images/cpp.png"><span class="tooltiptext">C++</span></div>
+                <div class="tooltip"><img src="./images/sql.png"><span class="tooltiptext">SQL</span></div>
+                <div class="tooltip"><img src="./images/mb.png"><span class="tooltiptext">MongoDB</span></div>
+                <div class="tooltip"><img src="./images/git.png"><span class="tooltiptext">Git</span></div>
+            </div>
+        </div>
+    </section>
+    <div class="rectangle-4"></div>
+    <section class="contact-me" id="contact">
+       
+
+        <div class="container grid">
+            <h1 class="title">Get In touch</h1>
+        <div>Be it discussing any collaboration opportunities or just a casual conversation, please feel free to reach out.
+            <p>I would love to have a chat with you! :)</p>
+
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/dixa-sapariya/" target="_blank"><img src="./images/linkedin.png" alt="linkedin" width="50px" height="50px"></a>
+                <a href="https://github.com/dixaSapariya" target="_blank"><img src="./images/github.png" alt="github"  width="50px" height="50px"></a>
+                <a href="https://leetcode.com/u/dixa_sapariya/" target="_blank"><img src="./images/leetcode.png" alt="leetcode"  width="50px" height="50px"></a>
+
+            </div>
+            </div>
+          
+        </div>
+    </section>
 </body>
 
 </html>
