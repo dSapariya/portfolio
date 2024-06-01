@@ -182,7 +182,7 @@ p{
     grid-template-columns: 75% 25%;
 }
 .showcase .container{
-    height: 50vh;
+    height: 80vh;
 }
 .showcase-image{
     grid-column: 2;
@@ -204,8 +204,8 @@ p{
 }
 .showcase-text .heading{
     font-size: 65px;
-    padding-bottom: 1em;
-    border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+    /* padding-bottom: 1em; */
+    /* border-bottom: solid 2px rgba(255, 255, 255, 0.125); */
 }
 .heading span {
     color: var(--text-color);
