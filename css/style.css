@@ -96,8 +96,40 @@ p{
 .navbar a:hover{
     border-bottom: 2px white solid;
 }
+.nav-icon{
+    display: none;
+}
 
-/* showcase */
+.side-bar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: white;
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    display: none;
+}
+.side-bar li {
+    width: 100%;
+}
+.side-bar a{
+    width: 100%;
+}
+.cross-icon{
+    height: 50px;
+    width: 50px;
+    right: 0;
+    top: 0;
+    position: absolute;
+    padding: 10px;
+}
 
 .rectangle-top {
     width: 100%;
@@ -137,6 +169,9 @@ p{
     height: 100px;
     background: linear-gradient(to bottom left, var(--blue-bg-color) 50%,var(--blue1-bg-color) 50%);
 }
+
+/* showcase */
+
 .showcase {
     padding: 5%;
     position:relative;
@@ -169,6 +204,8 @@ p{
 }
 .showcase-text .heading{
     font-size: 65px;
+    padding-bottom: 1em;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 }
 .heading span {
     color: var(--text-color);
@@ -376,4 +413,112 @@ p{
 }
 .contact-icons{
     padding: 10px 0;
+}
+
+
+
+@media (max-width: 500px) {
+    body{
+        font-size: 10pt;
+    }
+    /* nav{
+        display: none;
+    } */
+    .main-nav-bar{
+        display: none;
+    }
+    .nav-icon{
+        display: inline;
+        height: 25px;
+        width: 25px;
+
+    }
+    .navbar a{
+        color: var(--primary-text-color);
+    }
+    .navbar ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .side-bar li {
+        width: 100%;
+        margin: 10px 10px;
+    }
+    .showcase .grid {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align:center;
+
+    }
+    .showcase-text .heading{
+        font-size:30px;
+    }
+    .showcase-text .sub-heading{
+        font-size: 20px;
+    }
+    .showcase-image{
+        grid-row: 2;
+    }
+    .showcase-text{
+        grid-row: 1;
+    }
+    .showcase .container{
+        height: 100vh;
+    }
+    .showcase-image img{
+        height: 150px;
+        width: 150px;
+    }
+    .about-us .title{
+        font-size: 28px;
+    }
+    .experience .title{
+        font-size: 28px;
+    }
+    .experience-title{
+        order: 1;
+    }
+    .experience-data{
+        display: flex;
+        flex-direction: column;
+    }
+    .experience-title p{
+        font-size: 14px;
+    }
+    .education .title{
+        font-size: 28px;
+    }
+    .education .grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .education-data {
+        border-left: none;
+        padding-left: 20px;
+    }
+    .education{
+        padding: 0 2%;
+    }
+    .skills{
+        padding: 2%; 
+    }
+    .skills .title{
+        font-size: 28px;
+    }
+    .tooltip img {
+        width: 50px;
+        height: 50px;
+    }
+    .contact-me{
+        padding: 2%; 
+    }
+    .contact-me .title{
+        font-size: 28px;
+    }
 }

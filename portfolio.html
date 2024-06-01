@@ -17,8 +17,8 @@
     <div class="navbar" id="header">
         <div class="container flex" id="nav-bar">
             <h1 class="logo"></h1>
-            <nav>
-                <ul>
+            <nav class="main-nav-bar">
+                <ul >
                     <li>
                         <a href="#about">About Me</a>
                     </li>
@@ -34,11 +34,46 @@
                     <li>
                         <a href="#contact">Contact</a>
                     </li>
+                
+                </ul>
+            </nav>
+            <img class="nav-icon" onclick="showSideBar()" src="./images/menu.png" alt="menu-icon"/>
+            <nav class="side-bar">
+                <a onclick="hideSideBar()"> <img class="cross-icon" src="./images/cross.png" alt="menu-icon"/></a>
+
+                <ul >
+                   
+                    <li onclick="hideSideBar()">
+                        <a href="#about">About Me</a>
+                    </li>
+                    <li onclick="hideSideBar()">
+                        <a href="#experience">Experience</a>
+                    </li>
+                    <li onclick="hideSideBar()">
+                        <a href="#education">Education</a>
+                    </li>
+                    <li onclick="hideSideBar()">
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li onclick="hideSideBar()">
+                        <a href="#contact">Contact</a>
+                    </li>
+                 
                 </ul>
             </nav>
         </div>
     </div>
-
+    <script>
+        function showSideBar(){
+            const sideBar = document.querySelector('.side-bar');
+            console.log('sidebar')
+            sideBar.style.display = 'flex';
+        }
+        function hideSideBar(){
+            const sideBar = document.querySelector('.side-bar');
+            sideBar.style.display = 'none';
+        }
+    </script>
     <section class="showcase">
         <div class="container grid">
             <div class="showcase-text">
@@ -187,7 +222,7 @@
                     <ul>
                         <li>B.E., Computer Engineering, GTU</li>
                         <li> Shree Swami Atmanand Saraswati Institute Of Technology, Surat</li>
-                        <li>CGPA 8.5</li>
+                        <li>CGPA - 8.5</li>
 
                     </ul>
                 </div>
