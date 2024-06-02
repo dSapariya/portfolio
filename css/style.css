@@ -224,6 +224,7 @@ p{
     margin-top: 30px;
     font-weight: 600;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 /* About-us */

@@ -77,6 +77,10 @@
             const sideBar = document.querySelector('.side-bar');
             sideBar.style.display = 'none';
         }
+        function openDriveLink() {
+            var driveURL = 'https://drive.google.com/file/d/1s3PS3Yffr7blTp_pMvdomj7mSyD4Vhpo/view';
+            window.open(driveURL, '_blank');
+        }
     </script>
     <section class="showcase">
         <div class="container grid">
@@ -84,7 +88,7 @@
                 <span class="heading">HI, DIXA HERE! :)</span><br />
                 <span class="sub-heading"> </> Crafting Innovative Solutions as a Senior Software Engineer</span><br />
                 
-                <button>
+                <button  onclick="openDriveLink()">
                     Resume
                 </button>
             </div>
