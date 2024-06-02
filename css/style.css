@@ -149,11 +149,7 @@ p{
     background: linear-gradient(to top left, var(--secondary-bg-color) 50%,var(--blue1-bg-color) 50%);
 }
 
-.rectangle-4 {
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to bottom left, var(--secondary-bg-color) 50%,rgba(0, 0, 0, 0.7) 50%);
-}
+
 .rectangle-4 {
     width: 100%;
     height: 100px;
@@ -169,7 +165,11 @@ p{
     height: 100px;
     background: linear-gradient(to bottom left, var(--blue-bg-color) 50%,var(--blue1-bg-color) 50%);
 }
-
+.rectangle-7 {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top left,var(--blue1-bg-color) 50%, rgba(0, 0, 0, 0.7) 50%);
+}
 /* showcase */
 
 .showcase {
@@ -317,6 +317,7 @@ p{
 /* education */
 .education{
     padding:0 10%;
+    padding-bottom: 5%;
     color: var(--secondary-text-color);
     background-color: var(--secondary-bg-color);
 }
@@ -343,7 +344,7 @@ p{
 .skills{
     padding:5% 10%;
     color: var(--secondary-text-color);
-    background-color: var(--secondary-bg-color);
+    /* background-color: var(--secondary-bg-color); */
 }
 .skills .title{
     display: flex;
@@ -432,7 +433,7 @@ p{
 
 
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     body{
         font-size: 10pt;
     }
@@ -535,5 +536,19 @@ p{
     }
     .contact-me .title{
         font-size: 28px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar a{
+        font-size: 15px;
+    }
+    .showcase-text .heading {
+        font-size: 35px;
+    }
+    .showcase-text .sub-heading {
+        font-size: 20px;
+    }
+    .showcase .grid {
+        grid-template-columns: 60% 40%;
     }
 }
