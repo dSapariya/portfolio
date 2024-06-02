@@ -16,7 +16,7 @@
     margin: 0;
 }
 body {
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-family: Raleway, Helvetica, sans-serif;
     font-size: 16.5pt;
     font-weight: 200;
     color: var(--primary-text-color);
@@ -212,7 +212,7 @@ p{
 }
 .showcase-text .sub-heading{
     font-size: 35px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 .showcase-text button{
     padding: 16px 36px;
