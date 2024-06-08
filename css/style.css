@@ -22,11 +22,10 @@ body {
     color: var(--primary-text-color);
     height: 100vh;
     position:relative;
-    background-image: url(./../images/bg.jpg);
+    background: url(./../images/bg-min.jpg) no-repeat center center fixed;
+    background-size: cover;
     background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: overlay; /* Blend mode for background */
-    background-size: cover;
-    background-position: center;
     line-height:1.8;
     letter-spacing:0.1em;
     
