@@ -1,9 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
+        const img = new Image();
+        img.src = './images/bg-min.jpg';
+        img.onload = function() {
+            document.body.classList.add('loaded');
+        };
     var header = document.getElementById("header");
     
     var sticky = header.offsetTop;
     window.addEventListener("scroll", function() {
-        console.log('content');
         if (window.pageYOffset > sticky) {
             header.classList.add("sticky");
         } else {
@@ -26,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry)=>{
-            console.log('entry',entry)
             if(entry.isIntersecting){
                 entry.target.classList.add('show')
             }
@@ -40,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const observerEducation = new IntersectionObserver((entries) => {
         entries.forEach((entry)=>{
-            console.log('entry',entry)
             if(entry.isIntersecting){
                 entry.target.classList.add('show')
             }
@@ -54,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const observerImage = new IntersectionObserver((entries) => {
         entries.forEach((entry)=>{
-            console.log('image',entry)
             if(entry.isIntersecting){
                 entry.target.classList.add('show-image')
             }
@@ -68,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const observerImageRight = new IntersectionObserver((entries) => {
         entries.forEach((entry)=>{
-            console.log('image-right',entry)
             if(entry.isIntersecting){
                 entry.target.classList.add('show-image-right')
             }
@@ -86,7 +86,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     const observerAbous = new IntersectionObserver((entries,observer) => {
         entries.forEach((entry)=>{
-            console.log('show-about',entry)
             if(entry.isIntersecting){
                 const liItems = entry.target.querySelectorAll('li');
                 liItems.forEach((li, index) => {
