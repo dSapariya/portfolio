@@ -624,13 +624,28 @@ p{
     }
     .image-side .view-project {
         position: absolute;
-       
         background: rgba(0, 0, 0, 0.5);
         display: flex;
         justify-content: center;
         align-items: center;
-        opacity: 0;
+        opacity: 1;
         transition: opacity 0.3s ease;
+    }
+    .view-project button{
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 5px 7px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-transform: capitalize;
+    cursor: pointer;
+    }
+    .description p {
+        font-size: 10px;
+        line-height: 1.5;
     }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
