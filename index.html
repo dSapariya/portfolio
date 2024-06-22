@@ -20,7 +20,7 @@
         <div class="container flex" id="nav-bar">
             <h1 class="logo"></h1>
             <nav class="main-nav-bar">
-                <ul >
+                <ul>
                     <li>
                         <a href="#about">About Me</a>
                     </li>
@@ -28,24 +28,27 @@
                         <a href="#skills">Tech Stack</a>
                     </li>
                     <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
                         <a href="#experience">Experience</a>
                     </li>
                     <li>
                         <a href="#education">Education</a>
                     </li>
-                    
+
                     <li>
                         <a href="#contact">Contact</a>
                     </li>
-                
+
                 </ul>
             </nav>
-            <img class="nav-icon" onclick="showSideBar()" src="./images/menu.png" alt="menu-icon"/>
+            <img class="nav-icon" onclick="showSideBar()" src="./images/menu.png" alt="menu-icon" />
             <nav class="side-bar">
-                <a onclick="hideSideBar()"> <img class="cross-icon" src="./images/cross.png" alt="menu-icon"/></a>
+                <a onclick="hideSideBar()"> <img class="cross-icon" src="./images/cross.png" alt="menu-icon" /></a>
 
-                <ul >
-                   
+                <ul>
+
                     <li onclick="hideSideBar()">
                         <a href="#about">About Me</a>
                     </li>
@@ -58,27 +61,27 @@
                     <li onclick="hideSideBar()">
                         <a href="#education">Education</a>
                     </li>
-                 
+
                     <li onclick="hideSideBar()">
                         <a href="#contact">Contact</a>
                     </li>
-                 
+
                 </ul>
             </nav>
         </div>
     </div>
     <script>
-        function showSideBar(){
+        function showSideBar() {
             const sideBar = document.querySelector('.side-bar');
             console.log('sidebar')
             sideBar.style.display = 'flex';
         }
-        function hideSideBar(){
+        function hideSideBar() {
             const sideBar = document.querySelector('.side-bar');
             sideBar.style.display = 'none';
         }
-        function openDriveLink() {
-            var driveURL = 'https://drive.google.com/file/d/1s3PS3Yffr7blTp_pMvdomj7mSyD4Vhpo/view';
+        function openLink(url) {
+            var driveURL = url;
             window.open(driveURL, '_blank');
         }
     </script>
@@ -87,8 +90,8 @@
             <div class="showcase-text">
                 <span class="heading">HI, DIXA HERE! :)</span><br />
                 <span class="sub-heading"> </> Crafting Innovative Solutions as a Senior Software Engineer</span><br />
-                
-                <button  onclick="openDriveLink()">
+
+                <button onclick="openLink('https://drive.google.com/file/d/1s3PS3Yffr7blTp_pMvdomj7mSyD4Vhpo/view')">
                     Resume
                 </button>
             </div>
@@ -97,7 +100,7 @@
 
             </div>
         </div>
-     
+
     </section>
     <div class="rectangle-top"></div>
     <section class="about-us" id="about">
@@ -136,7 +139,8 @@
         <div class="container">
             <h1 class="title">Tech Stack</h1>
             <div class="image-card grid">
-                <div class="tooltip"><img  src="./images/vue.png" alt="vueJs"><span class="tooltiptext">VueJs</span></div>
+                <div class="tooltip"><img src="./images/vue.png" alt="vueJs"><span class="tooltiptext">VueJs</span>
+                </div>
                 <div class="tooltip"><img src="./images/react (1).png"><span class="tooltiptext">ReactJs</span>
                 </div>
                 <div class="tooltip"><img src="./images/js.png"><span class="tooltiptext">JavaScript</span></div>
@@ -159,7 +163,63 @@
             </div>
         </div>
     </section>
-    
+    <section class="projects" id="projects">
+        <div class="container">
+            <h1 class="title">Projects</h1>
+            <div class="grid">
+                <div class="image-side">
+                    <img src="./images/weatherApp.png" alt="weather-app">
+                    <div class="view-project">
+                        <button onclick="openLink('https://dsapariya.github.io/weather-tracker/')" >View Project</button>
+
+                    </div>
+                </div>
+                <div class="description">
+                    <h2>Weather App</h2>
+                    <p>Weather App is a web application that provides real-time weather information for any city in the
+                        world. It
+                        displays the current weather, temperature, humidity, and wind speed. The app also provides a 7-day
+                        weather forecast for the selected city.</p>
+                    <p>Technology : Vue3, Tailwind, Pinia, Axios</p>
+                   
+                </div>
+            </div>
+            <div class="grid-1">
+                <div class="description">
+                    <h2>Tic Tac Toe</h2>
+                    <p>The Tic Tac Toe game project is a web application where two players take turns marking a 3x3 grid with Xs and Os. 
+                        The objective is to align three marks in a row, column, or diagonal to win, with a draw declared if the grid is filled without a winner. 
+                        </p>
+                    <p>Technology : Vue3, Mobile responsive</p>
+                   
+                </div>
+                <div class="image-side">
+                    <img src="./images/tic-tac-toe.png" alt="weather-app" >
+                    <div class="view-project">
+                        <button onclick="openLink('https://dsapariya.github.io/tic-tac-toe/')" >View Project</button>
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="grid">
+                <div class="image-side">
+                    <img class="border" src="./images/coffee.png" alt="weather-app">
+                    <div class="view-project">
+                        <button onclick="openLink('https://dsapariya.github.io/coffee-website/')" >View Project</button>
+
+                    </div>
+                </div>
+                <div class="description">
+                    <h2>Coffee-website-design</h2>
+                    <p>The coffee website design project is a visually appealing and user-friendly web interface for a coffee shop or brand.
+                         It features attractive layouts, engaging images, and smooth navigation to showcase products, menu items, and promotional offers.</p>
+                    <p>Technology : HTML, CSS, JavaScript, Bootstrap with Responsive.</p>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="rectangle-7"></div>
     <section class="experience" id="experience">
         <div class="container">
@@ -188,7 +248,7 @@
                     <img src="./images/mt.jpg" alt="ManekTech" />
                 </div>
             </div>
-        
+
         </div>
 
         </div>
@@ -196,7 +256,7 @@
     <div class="rectangle-5"></div>
     <section class="experience two" id="experience">
         <div class="container">
-           
+
             <div class="experience-data grid-right">
                 <div class="experience-icon">
                     <img src="./images/zignuts.png" alt="ManekTech" />
@@ -217,7 +277,7 @@
                     </ul>
                 </div>
             </div>
-            
+
         </div>
 
         </div>
@@ -270,21 +330,25 @@
 
     <div class="rectangle-4"></div>
     <section class="contact-me" id="contact">
-       
+
 
         <div class="container grid">
             <h1 class="title">Get In touch</h1>
-        <div>Be it discussing any collaboration opportunities or just a casual conversation, please feel free to reach out.
-            <p>I would love to have a chat with you! :)</p>
+            <div>Be it discussing any collaboration opportunities or just a casual conversation, please feel free to
+                reach out.
+                <p>I would love to have a chat with you! :)</p>
 
-            <div class="contact-icons">
-                <a href="https://www.linkedin.com/in/dixa-sapariya/" target="_blank"><img src="./images/linkedin.png" alt="linkedin" width="50px" height="50px"></a>
-                <a href="https://github.com/dixaSapariya" target="_blank"><img src="./images/github.png" alt="github"  width="50px" height="50px"></a>
-                <a href="https://leetcode.com/u/dixa_sapariya/" target="_blank"><img src="./images/leetcode.png" alt="leetcode"  width="50px" height="50px"></a>
+                <div class="contact-icons">
+                    <a href="https://www.linkedin.com/in/dixa-sapariya/" target="_blank"><img
+                            src="./images/linkedin.png" alt="linkedin" width="50px" height="50px"></a>
+                    <a href="https://github.com/dixaSapariya" target="_blank"><img src="./images/github.png"
+                            alt="github" width="50px" height="50px"></a>
+                    <a href="https://leetcode.com/u/dixa_sapariya/" target="_blank"><img src="./images/leetcode.png"
+                            alt="leetcode" width="50px" height="50px"></a>
 
+                </div>
             </div>
-            </div>
-          
+
         </div>
     </section>
 </body>
