@@ -553,17 +553,21 @@ p{
         grid-row: 1;
     }
     .showcase .container{
-        height: 90vh;
+        height: 65vh;
     }
     .showcase-image img{
         height: 150px;
         width: 150px;
     }
+    .about-us,.experience,.education {
+        padding:0% 5%;
+    }
     .about-us .title{
         font-size: 28px;
     }
-    .experience .title{
+    .experience .container .title{
         font-size: 28px;
+        text-align: center !important;
     }
     .experience-title{
         order: 1;
@@ -591,7 +595,7 @@ p{
         padding: 0 2%;
     }
     .skills{
-        padding: 2%; 
+        padding:0% 5%;
     }
     .skills .title{
         font-size: 28px;
@@ -606,6 +610,9 @@ p{
     .contact-me .title{
         font-size: 28px;
     }
+    .projects{
+        padding:0% 5%;
+    }
     .projects .grid {
         grid-template-columns: 100%;
     }
@@ -613,6 +620,9 @@ p{
         display: flex;
         flex-direction: column-reverse;
         grid-template-columns: 100%;
+    }
+    .projects .description h2{
+        text-align: center;
     }
     .image-side img {
         max-width: 70%;
