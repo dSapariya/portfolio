@@ -402,7 +402,7 @@ p{
  /* projects  */
 
 .projects{
-    display: none;
+    display: flex;
     padding:0% 10%;
     color: var(--secondary-text-color);
 }
